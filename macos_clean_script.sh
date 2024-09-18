@@ -27,10 +27,10 @@ if [[ $(command -v pnpm) ]]; then
 	pnpm update --global
 fi
 
-if [[ $(command -v yarn) ]]; then
-	printf "\n\n📜 Updating JS packages installed globally by yarn...\n"
-	yarn global upgrade
-fi
+#if [[ $(command -v yarn) ]]; then
+#	printf "\n\n📜 Updating JS packages installed globally by yarn...\n"
+#	yarn global upgrade
+#fi
 
 if [[ $(command -v gem) ]]; then
 	printf "\n\n💎 Updating Ruby gems...\n"
@@ -39,3 +39,6 @@ fi
 
 printf "\n\n🐍 Updating global pip...\n"
 python3 -m pip install --upgrade pip
+
+printf "\n\n🍎 Listing official MacOS pending upgrades...\n"
+softwareupdate --list
